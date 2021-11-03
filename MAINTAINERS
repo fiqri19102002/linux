@@ -334,7 +334,7 @@ F:	drivers/platform/x86/acer-wmi.c
 
 ACPI
 M:	"Rafael J. Wysocki" <rafael@kernel.org>
-M:	Len Brown <lenb@kernel.org>
+R:	Len Brown <lenb@kernel.org>
 L:	linux-acpi@vger.kernel.org
 S:	Supported
 W:	https://01.org/linux-acpi
@@ -355,7 +355,7 @@ F:	tools/power/acpi/
 
 ACPI APEI
 M:	"Rafael J. Wysocki" <rafael@kernel.org>
-M:	Len Brown <lenb@kernel.org>
+R:	Len Brown <lenb@kernel.org>
 R:	James Morse <james.morse@arm.com>
 R:	Tony Luck <tony.luck@intel.com>
 R:	Borislav Petkov <bp@alien8.de>
@@ -377,14 +377,6 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm
 F:	drivers/acpi/acpica/
 F:	include/acpi/
 F:	tools/power/acpi/
-
-ACPI FAN DRIVER
-M:	Zhang Rui <rui.zhang@intel.com>
-L:	linux-acpi@vger.kernel.org
-S:	Supported
-W:	https://01.org/linux-acpi
-B:	https://bugzilla.kernel.org
-F:	drivers/acpi/fan.c
 
 ACPI FOR ARM64 (ACPI/arm64)
 M:	Lorenzo Pieralisi <lorenzo.pieralisi@arm.com>
@@ -427,14 +419,6 @@ S:	Supported
 W:	https://01.org/linux-acpi
 B:	https://bugzilla.kernel.org
 F:	drivers/acpi/*thermal*
-
-ACPI VIDEO DRIVER
-M:	Zhang Rui <rui.zhang@intel.com>
-L:	linux-acpi@vger.kernel.org
-S:	Supported
-W:	https://01.org/linux-acpi
-B:	https://bugzilla.kernel.org
-F:	drivers/acpi/acpi_video.c
 
 ACPI VIOT DRIVER
 M:	Jean-Philippe Brucker <jean-philippe@linaro.org>
@@ -909,6 +893,7 @@ F:	include/uapi/linux/psp-sev.h
 AMD DISPLAY CORE
 M:	Harry Wentland <harry.wentland@amd.com>
 M:	Leo Li <sunpeng.li@amd.com>
+M:	Rodrigo Siqueira <Rodrigo.Siqueira@amd.com>
 L:	amd-gfx@lists.freedesktop.org
 S:	Supported
 T:	git https://gitlab.freedesktop.org/agd5f/linux.git
@@ -6062,6 +6047,12 @@ T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	Documentation/devicetree/bindings/display/panel/samsung,lms397kf04.yaml
 F:	drivers/gpu/drm/panel/panel-samsung-db7430.c
 
+DRM DRIVER FOR SAMSUNG S6D27A1 PANELS
+M:	Markuss Broks <markuss.broks@gmail.com>
+S:	Maintained
+F:	Documentation/devicetree/bindings/display/panel/samsung,s6d27a1.yaml
+F:	drivers/gpu/drm/panel/panel-samsung-s6d27a1.c
+
 DRM DRIVER FOR SITRONIX ST7703 PANELS
 M:	Guido Günther <agx@sigxcpu.org>
 R:	Purism Kernel Team <kernel@puri.sm>
@@ -6467,6 +6458,14 @@ S:	Maintained
 T:	git git://anongit.freedesktop.org/drm/drm-misc
 F:	drivers/gpu/drm/ttm/
 F:	include/drm/ttm/
+
+DRM GPU SCHEDULER
+M:	Andrey Grodzovsky <andrey.grodzovsky@amd.com>
+L:	dri-devel@lists.freedesktop.org
+S:	Maintained
+T:	git git://anongit.freedesktop.org/drm/drm-misc
+F:	drivers/gpu/drm/scheduler/
+F:	include/drm/gpu_scheduler.h
 
 DSBR100 USB FM RADIO DRIVER
 M:	Alexey Klimov <klimov.linux@gmail.com>
@@ -18665,7 +18664,9 @@ L:	linux-pm@vger.kernel.org
 S:	Supported
 Q:	https://patchwork.kernel.org/project/linux-pm/list/
 T:	git git://git.kernel.org/pub/scm/linux/kernel/git/rafael/linux-pm.git thermal
+F:	Documentation/ABI/testing/sysfs-class-thermal
 F:	Documentation/devicetree/bindings/thermal/
+F:	Documentation/driver-api/thermal/
 F:	drivers/thermal/
 F:	include/linux/cpu_cooling.h
 F:	include/linux/thermal.h
