@@ -816,7 +816,7 @@ S:	Maintained
 F:	drivers/staging/media/sunxi/cedrus/
 
 ALPHA PORT
-M:	Richard Henderson <rth@twiddle.net>
+M:	Richard Henderson <richard.henderson@linaro.org>
 M:	Ivan Kokshaysky <ink@jurassic.park.msu.ru>
 M:	Matt Turner <mattst88@gmail.com>
 L:	linux-alpha@vger.kernel.org
@@ -1850,6 +1850,7 @@ ARM/APPLE MACHINE SUPPORT
 M:	Hector Martin <marcan@marcan.st>
 M:	Sven Peter <sven@svenpeter.dev>
 R:	Alyssa Rosenzweig <alyssa@rosenzweig.io>
+L:	asahi@lists.linux.dev
 L:	linux-arm-kernel@lists.infradead.org (moderated for non-subscribers)
 S:	Maintained
 W:	https://asahilinux.org
@@ -19129,7 +19130,7 @@ F:	drivers/pinctrl/spear/
 
 SPI NOR SUBSYSTEM
 M:	Tudor Ambarus <tudor.ambarus@microchip.com>
-M:	Pratyush Yadav <p.yadav@ti.com>
+M:	Pratyush Yadav <pratyush@kernel.org>
 R:	Michael Walle <michael@walle.cc>
 L:	linux-mtd@lists.infradead.org
 S:	Maintained
