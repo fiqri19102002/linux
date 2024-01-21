@@ -3692,6 +3692,13 @@ L:	bpf@vger.kernel.org
 S:	Supported
 F:	arch/arm64/net/
 
+BPF JIT for LOONGARCH
+M:	Tiezhu Yang <yangtiezhu@loongson.cn>
+R:	Hengqi Chen <hengqi.chen@gmail.com>
+L:	bpf@vger.kernel.org
+S:	Maintained
+F:	arch/loongarch/net/
+
 BPF JIT for MIPS (32-BIT AND 64-BIT)
 M:	Johan Almbladh <johan.almbladh@anyfinetworks.com>
 M:	Paul Burton <paulburton@kernel.org>
@@ -12632,6 +12639,13 @@ S:	Maintained
 F:	Documentation/devicetree/bindings/gpio/loongson,ls-gpio.yaml
 F:	drivers/gpio/gpio-loongson-64bit.c
 
+LOONGSON LS2X APB DMA DRIVER
+M:	Binbin Zhou <zhoubinbin@loongson.cn>
+L:	dmaengine@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/dma/loongson,ls2x-apbdma.yaml
+F:	drivers/dma/ls2x-apb-dma.c
+
 LOONGSON LS2X I2C DRIVER
 M:	Binbin Zhou <zhoubinbin@loongson.cn>
 L:	linux-i2c@vger.kernel.org
@@ -17133,10 +17147,10 @@ PERFORMANCE EVENTS SUBSYSTEM
 M:	Peter Zijlstra <peterz@infradead.org>
 M:	Ingo Molnar <mingo@redhat.com>
 M:	Arnaldo Carvalho de Melo <acme@kernel.org>
+M:	Namhyung Kim <namhyung@kernel.org>
 R:	Mark Rutland <mark.rutland@arm.com>
 R:	Alexander Shishkin <alexander.shishkin@linux.intel.com>
 R:	Jiri Olsa <jolsa@kernel.org>
-R:	Namhyung Kim <namhyung@kernel.org>
 R:	Ian Rogers <irogers@google.com>
 R:	Adrian Hunter <adrian.hunter@intel.com>
 L:	linux-perf-users@vger.kernel.org
