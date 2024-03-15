@@ -1064,7 +1064,7 @@ F:	include/linux/amd-pstate.h
 F:	tools/power/x86/amd_pstate_tracer/amd_pstate_trace.py
 
 AMD PTDMA DRIVER
-M:	Sanjay R Mehta <sanju.mehta@amd.com>
+M:	Basavaraj Natikar <Basavaraj.Natikar@amd.com>
 L:	dmaengine@vger.kernel.org
 S:	Maintained
 F:	drivers/dma/ptdma/
@@ -2761,6 +2761,7 @@ M:	Andrzej Hajda <andrzej.hajda@intel.com>
 L:	linux-arm-kernel@lists.infradead.org (moderated for non-subscribers)
 L:	linux-media@vger.kernel.org
 S:	Maintained
+F:	Documentation/devicetree/bindings/media/samsung,s5p-mfc.yaml
 F:	drivers/media/platform/samsung/s5p-mfc/
 
 ARM/SOCFPGA ARCHITECTURE
@@ -3555,6 +3556,7 @@ R:	Brian Foster <bfoster@redhat.com>
 L:	linux-bcachefs@vger.kernel.org
 S:	Supported
 C:	irc://irc.oftc.net/bcache
+T:	git https://evilpiepirate.org/git/bcachefs.git
 F:	fs/bcachefs/
 
 BDISP ST MEDIA DRIVER
@@ -5413,6 +5415,7 @@ R:	Muchun Song <muchun.song@linux.dev>
 L:	cgroups@vger.kernel.org
 L:	linux-mm@kvack.org
 S:	Maintained
+F:	include/linux/memcontrol.h
 F:	mm/memcontrol.c
 F:	mm/swap_cgroup.c
 F:	samples/cgroup/*
@@ -10155,7 +10158,6 @@ S:	Maintained
 W:	https://i2c.wiki.kernel.org/
 Q:	https://patchwork.ozlabs.org/project/linux-i2c/list/
 T:	git git://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux.git
-F:	Documentation/devicetree/bindings/i2c/i2c.txt
 F:	Documentation/i2c/
 F:	drivers/i2c/*
 F:	include/dt-bindings/i2c/i2c.h
@@ -13628,6 +13630,7 @@ T:	git git://linuxtv.org/media_tree.git
 F:	Documentation/devicetree/bindings/media/renesas,csi2.yaml
 F:	Documentation/devicetree/bindings/media/renesas,isp.yaml
 F:	Documentation/devicetree/bindings/media/renesas,vin.yaml
+F:	drivers/media/platform/renesas/rcar-csi2.c
 F:	drivers/media/platform/renesas/rcar-isp.c
 F:	drivers/media/platform/renesas/rcar-vin/
 
@@ -13715,7 +13718,7 @@ L:	dmaengine@vger.kernel.org
 L:	linux-arm-kernel@lists.infradead.org (moderated for non-subscribers)
 L:	linux-mediatek@lists.infradead.org (moderated for non-subscribers)
 S:	Maintained
-F:	Documentation/devicetree/bindings/dma/mtk-*
+F:	Documentation/devicetree/bindings/dma/mediatek,*
 F:	drivers/dma/mediatek/
 
 MEDIATEK ETHERNET DRIVER
@@ -14144,15 +14147,24 @@ T:	git git://git.kernel.org/pub/scm/linux/kernel/git/akpm/mm
 T:	quilt git://git.kernel.org/pub/scm/linux/kernel/git/akpm/25-new
 F:	include/linux/gfp.h
 F:	include/linux/gfp_types.h
+F:	include/linux/memfd.h
+F:	include/linux/memory.h
 F:	include/linux/memory_hotplug.h
+F:	include/linux/memory-tiers.h
+F:	include/linux/mempolicy.h
+F:	include/linux/mempool.h
+F:	include/linux/memremap.h
 F:	include/linux/mm.h
+F:	include/linux/mm_*.h
 F:	include/linux/mmzone.h
+F:	include/linux/mmu_notifier.h
 F:	include/linux/pagewalk.h
 F:	include/linux/rmap.h
 F:	include/trace/events/ksm.h
 F:	mm/
 F:	tools/mm/
 F:	tools/testing/selftests/mm/
+N:	include/linux/page[-_]*
 
 MEMORY MAPPING
 M:	Andrew Morton <akpm@linux-foundation.org>
@@ -14729,6 +14741,17 @@ F:	arch/mips/
 F:	drivers/platform/mips/
 F:	include/dt-bindings/mips/
 
+MIPS BAIKAL-T1 PLATFORM
+M:	Serge Semin <fancer.lancer@gmail.com>
+L:	linux-mips@vger.kernel.org
+S:	Supported
+F:	Documentation/devicetree/bindings/bus/baikal,bt1-*.yaml
+F:	Documentation/devicetree/bindings/clock/baikal,bt1-*.yaml
+F:	drivers/bus/bt1-*.c
+F:	drivers/clk/baikal-t1/
+F:	drivers/memory/bt1-l2-ctl.c
+F:	drivers/mtd/maps/physmap-bt1-rom.[ch]
+
 MIPS BOSTON DEVELOPMENT BOARD
 M:	Paul Burton <paulburton@kernel.org>
 L:	linux-mips@vger.kernel.org
@@ -14848,6 +14871,17 @@ S:	Orphan
 W:	https://linuxtv.org
 Q:	http://patchwork.linuxtv.org/project/linux-media/list/
 F:	drivers/media/dvb-frontends/mn88473*
+
+MOBILEYE MIPS SOCS
+M:	Vladimir Kondratiev <vladimir.kondratiev@mobileye.com>
+M:	Gregory CLEMENT <gregory.clement@bootlin.com>
+M:	Théo Lebrun <theo.lebrun@bootlin.com>
+L:	linux-mips@vger.kernel.org
+S:	Maintained
+F:	Documentation/devicetree/bindings/mips/mobileye.yaml
+F:	arch/mips/boot/dts/mobileye/
+F:	arch/mips/configs/eyeq5_defconfig
+F:	arch/mips/mobileye/board-epm5.its.S
 
 MODULE SUPPORT
 M:	Luis Chamberlain <mcgrof@kernel.org>
@@ -15491,7 +15525,6 @@ M:	Ryusuke Konishi <konishi.ryusuke@gmail.com>
 L:	linux-nilfs@vger.kernel.org
 S:	Supported
 W:	https://nilfs.sourceforge.io/
-W:	https://nilfs.osdn.jp/
 T:	git https://github.com/konis/nilfs2.git
 F:	Documentation/filesystems/nilfs2.rst
 F:	fs/nilfs2/
@@ -16422,8 +16455,8 @@ S:	Supported
 F:	drivers/infiniband/ulp/opa_vnic
 
 OPEN FIRMWARE AND FLATTENED DEVICE TREE
-M:	Rob Herring <robh+dt@kernel.org>
-M:	Frank Rowand <frowand.list@gmail.com>
+M:	Rob Herring <robh@kernel.org>
+M:	Saravana Kannan <saravanak@google.com>
 L:	devicetree@vger.kernel.org
 S:	Maintained
 W:	http://www.devicetree.org/
@@ -16439,7 +16472,7 @@ K:	of_overlay_fdt_apply
 K:	of_overlay_remove
 
 OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS
-M:	Rob Herring <robh+dt@kernel.org>
+M:	Rob Herring <robh@kernel.org>
 M:	Krzysztof Kozlowski <krzysztof.kozlowski+dt@linaro.org>
 M:	Conor Dooley <conor+dt@kernel.org>
 L:	devicetree@vger.kernel.org
@@ -20974,6 +21007,13 @@ S:	Maintained
 T:	git https://git.kernel.org/pub/scm/linux/kernel/git/conor/linux.git/
 F:	Documentation/devicetree/bindings/soc/starfive/
 
+STARFIVE STARLINK PMU DRIVER
+M:	Ji Sheng Teoh <jisheng.teoh@starfivetech.com>
+S:	Maintained
+F:	Documentation/admin-guide/perf/starfive_starlink_pmu.rst
+F:	Documentation/devicetree/bindings/perf/starfive,jh8100-starlink-pmu.yaml
+F:	drivers/perf/starfive_starlink_pmu.c
+
 STARFIVE TRNG DRIVER
 M:	Jia Jie Ho <jiajie.ho@starfivetech.com>
 S:	Supported
@@ -21986,7 +22026,6 @@ F:	drivers/i2c/busses/i2c-davinci.c
 
 TI DAVINCI SERIES CLOCK DRIVER
 M:	David Lechner <david@lechnology.com>
-R:	Sekhar Nori <nsekhar@ti.com>
 S:	Maintained
 F:	Documentation/devicetree/bindings/clock/ti/davinci/
 F:	drivers/clk/davinci/
@@ -23125,12 +23164,11 @@ L:	kvm@vger.kernel.org
 S:	Maintained
 F:	drivers/vfio/pci/mlx5/
 
-VFIO VIRTIO PCI DRIVER
-M:	Yishai Hadas <yishaih@nvidia.com>
+VFIO NVIDIA GRACE GPU DRIVER
+M:	Ankit Agrawal <ankita@nvidia.com>
 L:	kvm@vger.kernel.org
-L:	virtualization@lists.linux.dev
-S:	Maintained
-F:	drivers/vfio/pci/virtio
+S:	Supported
+F:	drivers/vfio/pci/nvgrace-gpu/
 
 VFIO PCI DEVICE SPECIFIC DRIVERS
 R:	Jason Gunthorpe <jgg@nvidia.com>
@@ -23154,6 +23192,13 @@ M:	Eric Auger <eric.auger@redhat.com>
 L:	kvm@vger.kernel.org
 S:	Maintained
 F:	drivers/vfio/platform/
+
+VFIO VIRTIO PCI DRIVER
+M:	Yishai Hadas <yishaih@nvidia.com>
+L:	kvm@vger.kernel.org
+L:	virtualization@lists.linux.dev
+S:	Maintained
+F:	drivers/vfio/pci/virtio
 
 VGA_SWITCHEROO
 R:	Lukas Wunner <lukas@wunner.de>
@@ -24208,7 +24253,7 @@ XILINX SD-FEC IP CORES
 M:	Derek Kiernan <derek.kiernan@amd.com>
 M:	Dragan Cvetic <dragan.cvetic@amd.com>
 S:	Maintained
-F:	Documentation/devicetree/bindings/misc/xlnx,sd-fec.txt
+F:	Documentation/devicetree/bindings/misc/xlnx,sd-fec.yaml
 F:	Documentation/misc-devices/xilinx_sdfec.rst
 F:	drivers/misc/Kconfig
 F:	drivers/misc/Makefile
@@ -24440,6 +24485,7 @@ ZSWAP COMPRESSED SWAP CACHING
 M:	Johannes Weiner <hannes@cmpxchg.org>
 M:	Yosry Ahmed <yosryahmed@google.com>
 M:	Nhat Pham <nphamcs@gmail.com>
+R:	Chengming Zhou <chengming.zhou@linux.dev>
 L:	linux-mm@kvack.org
 S:	Maintained
 F:	Documentation/admin-guide/mm/zswap.rst
@@ -24447,6 +24493,7 @@ F:	include/linux/zpool.h
 F:	include/linux/zswap.h
 F:	mm/zpool.c
 F:	mm/zswap.c
+F:	tools/testing/selftests/cgroup/test_zswap.c
 
 THE REST
 M:	Linus Torvalds <torvalds@linux-foundation.org>
