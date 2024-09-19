@@ -311,6 +311,7 @@ config PPC
 	select SYSCTL_EXCEPTION_TRACE
 	select THREAD_INFO_IN_TASK
 	select TRACE_IRQFLAGS_SUPPORT
+	select VDSO_GETRANDOM
 	#
 	# Please keep this list sorted alphabetically.
 	#
@@ -1025,6 +1026,10 @@ config PPC_MEM_KEYS
 	  For details, see Documentation/core-api/protection-keys.rst
 
 	  If unsure, say y.
+
+config ARCH_PKEY_BITS
+	int
+	default 5
 
 config PPC_SECURE_BOOT
 	prompt "Enable secure boot support"
