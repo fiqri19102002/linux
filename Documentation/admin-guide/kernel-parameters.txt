@@ -1785,7 +1785,9 @@
 			allocation boundaries as a proactive defense
 			against bounds-checking flaws in the kernel's
 			copy_to_user()/copy_from_user() interface.
-		on	Perform hardened usercopy checks (default).
+			The default is determined by
+			CONFIG_HARDENED_USERCOPY_DEFAULT_ON.
+		on	Perform hardened usercopy checks.
 		off	Disable hardened usercopy checks.
 
 	hardlockup_all_cpu_backtrace=
@@ -6082,7 +6084,7 @@
 			is assumed to be I/O ports; otherwise it is memory.
 
 	reserve_mem=	[RAM]
-			Format: nn[KNG]:<align>:<label>
+			Format: nn[KMG]:<align>:<label>
 			Reserve physical memory and label it with a name that
 			other subsystems can use to access it. This is typically
 			used for systems that do not wipe the RAM, and this command
