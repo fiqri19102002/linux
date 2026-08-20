@@ -4614,6 +4614,7 @@ F:	lib/bitmap.c
 F:	lib/cpumask.c
 F:	lib/find_bit.c
 F:	lib/find_bit_benchmark.c
+F:	lib/region_alloc_benchmark.c
 F:	lib/test_bitmap.c
 F:	lib/tests/cpumask_kunit.c
 F:	tools/include/linux/bitfield.h
@@ -7738,6 +7739,7 @@ F:	include/linux/dmi.h
 DOCUMENTATION
 M:	Jonathan Corbet <corbet@lwn.net>
 R:	Shuah Khan <skhan@linuxfoundation.org>
+R:	Randy Dunlap <rdunlap@infradead.org>
 L:	linux-doc@vger.kernel.org
 S:	Maintained
 P:	Documentation/doc-guide/maintainer-profile.rst
@@ -9913,7 +9915,6 @@ F:	net/core/failover.c
 FANOTIFY
 M:	Jan Kara <jack@suse.cz>
 R:	Amir Goldstein <amir73il@gmail.com>
-R:	Matthew Bobrowski <repnop@google.com>
 L:	linux-fsdevel@vger.kernel.org
 S:	Maintained
 F:	fs/notify/fanotify/
@@ -15607,6 +15608,7 @@ F:	Documentation/core-api/maple_tree.rst
 F:	include/linux/maple_tree.h
 F:	include/trace/events/maple_tree.h
 F:	lib/maple_tree.c
+F:	lib/region_alloc_benchmark.c
 F:	lib/test_maple_tree.c
 F:	rust/helpers/maple_tree.c
 F:	rust/kernel/maple_tree.rs
@@ -19424,6 +19426,9 @@ L:	linux-nvme@lists.infradead.org
 S:	Supported
 W:	http://git.infradead.org/nvme.git
 T:	git git://git.infradead.org/nvme.git
+F:	Documentation/ABI/stable/sysfs-nvme
+F:	Documentation/admin-guide/nvme-multipath.rst
+F:	Documentation/fault-injection/nvme-fault-injection.rst
 F:	Documentation/nvme/
 F:	drivers/nvme/common/
 F:	drivers/nvme/host/
@@ -19466,6 +19471,7 @@ L:	linux-nvme@lists.infradead.org
 S:	Supported
 W:	http://git.infradead.org/nvme.git
 T:	git git://git.infradead.org/nvme.git
+F:	Documentation/ABI/stable/configfs-nvmet
 F:	drivers/nvme/target/
 
 NVMEM FRAMEWORK
@@ -27569,10 +27575,10 @@ F:	kernel/trace/trace_osnoise.c
 F:	kernel/trace/trace_sched_wakeup.c
 
 TRADITIONAL CHINESE DOCUMENTATION
-M:	Hu Haowen <2023002089@link.tyut.edu.cn>
+M:	Chen-Yu Yeh <chenyou910331@gmail.com>
+M:	Weijie Yuan <wy@wyuan.org>
+M:	Dongliang Mu <dzm91@hust.edu.cn>
 S:	Maintained
-W:	https://github.com/srcres258/linux-doc
-T:	git https://github.com/srcres258/linux-doc.git doc-zh-tw
 F:	Documentation/translations/zh_TW/
 
 TRIGGER SOURCE
@@ -29447,6 +29453,7 @@ F:	Documentation/core-api/xarray.rst
 F:	include/linux/idr.h
 F:	include/linux/xarray.h
 F:	lib/idr.c
+F:	lib/region_alloc_benchmark.c
 F:	lib/test_xarray.c
 F:	lib/xarray.c
 F:	tools/testing/radix-tree
